@@ -1,0 +1,307 @@
+<!DOCTYPE HTML>
+<html lang="">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ocean Safety Alliance</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+    <!--    jQuery-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!--    flickity-->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+</head>
+
+<style>
+    @charset "utf-8";
+
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    body {
+        font-family: 'Roboto', sans-serif;
+
+    }
+
+    nav {
+        padding-top: .5%;
+        padding-bottom: .5%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        width: 100vw;
+        background-color: #151560;
+
+    }
+
+    nav ul {
+
+        list-style-type: none;
+        margin: 0;
+
+        /*        overflow: hidden;*/
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+
+    }
+
+    nav li {
+        padding-left: 1%;
+        white-space: nowrap;
+        display: inline;
+    }
+
+    nav img {
+        max-height: 40px;
+    }
+
+    nav li a {
+        display: inline-block;
+        color: #EDDBCC;
+        text-align: center;
+        margin: 1vw;
+        text-decoration: none;
+    }
+
+    nav li a:hover:not(.active) {
+        color: #02A3DA;
+    }
+
+    nav .active {
+        text-decoration: underline;
+    }
+
+    #header {
+        height: 70vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+    }
+
+    #hero {
+
+        width: 100vw;
+        height: 40vh;
+        margin: auto;
+
+        /*    font-family: 'Roboto', sans-serif;*/
+    }
+
+    #herocontent {
+        width: 60%;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #herocontent img {
+
+        max-width: 20vw;
+        height: auto;
+    }
+
+    #herotxt {
+        color: #2D72B6;
+        padding-left: 3%;
+    }
+
+    #herocontent p {
+
+
+        /*        max-width: 70%;*/
+
+    }
+
+    /*    Flickty*/
+
+    #flickity {
+        height: 85vh;
+        background-color: #333;
+        /*        background: #0F2C35;*/
+        /*        padding: 10% 0 0 0;*/
+    }
+
+    .carousel {
+        background-color: #333;
+        padding: 15%;
+    }
+
+    .carousel-cell {
+        width: 100vw;
+        height: 85vh;
+        counter-increment: carousel-cell;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+    .cellcontent {
+        grid-column: 2;
+        margin: auto;
+        width: 40vw;
+        max-width: 500px;
+        background-color: white;
+        padding: 5%;
+
+
+    }
+
+    .carousel-cell img {
+        width: 200px;
+    }
+
+    .celllink {
+        text-decoration: none;
+        color: black;
+        line-height: 1.63em;
+
+    }
+
+    #cell1 {
+        background-image: url("https://raw.githubusercontent.com/Teranya/VisInfo2/master/images/industry1.jpg");
+        background-size: cover;
+    }
+
+    #cell2 {
+        background-image: url("https://raw.githubusercontent.com/Teranya/VisInfo2/master/images/ice1.jpg");
+        background-size: cover;
+    }
+
+    #cell3 {
+        background-image: url("https://raw.githubusercontent.com/Teranya/VisInfo2/master/images/plastic2.jpg");
+        background-size: cover;
+    }
+
+    #cell4 {
+        background-image: url("https://raw.githubusercontent.com/Teranya/VisInfo2/master/images/coral1.jpg");
+        background-size: cover;
+    }
+
+
+
+    cell number .carousel-cell:before {
+        display: block;
+        text-align: center;
+        content: counter(carousel-cell);
+        line-height: 200px;
+        font-size: 80px;
+        color: white;
+    }
+
+    .flickity-page-dots {
+        bottom: 20px;
+
+    }
+
+    /* white circles */
+    .flickity-page-dots .dot {
+        width: 12px;
+        height: 12px;
+        opacity: 1;
+        background: transparent;
+        border: 1px solid white;
+    }
+
+    /* fill-in selected dot */
+    .flickity-page-dots .dot.is-selected {
+        background: white;
+    }
+
+
+
+
+    /*camapign*/
+    #campaign {
+        background-color: #2C2C2C;
+        color: white;
+        height: 90vh;
+        /*        margin-top: 4%;*/
+    }
+
+</style>
+
+<body>
+    <nav>
+        <img src="https://raw.githubusercontent.com/Teranya/VisInfo2/master/images/LOGOALTWHITE.png">
+        <ul>
+<li><a class="active" href="https://teranya.github.io/VisInfo2/">Home</a></li>
+            <li><a href="https://teranya.github.io/VisInfo2/acidification/">Acidification</a></li>
+            <li><a href="https://teranya.github.io/VisInfo2/pollution/">Pollution</a></li>
+            <li><a href="https://teranya.github.io/VisInfo2/sealevels/">Water Levels</a></li>
+            <li><a href="https://teranya.github.io/VisInfo2/corals/">Coral Bleaching</a></li>
+        </ul>
+    </nav>
+
+    <div id="flickity">
+        <div class="main-carousel">
+            <div class="carousel-cell" id="cell1">
+                <div class="cellcontent">
+                    <!--                    <img src="https://raw.githubusercontent.com/Teranya/VisInfo2/master/images/industry1.jpg">-->
+                    <a class="celllink" href="#">Ocean acidity has increased by 30% since the beginning of the Industrial Revolution. This increase is 100 times faster than any change in acidity experienced by marine organisms for at least the last 20 million years.</a>
+                </div>
+            </div>
+            <div class="carousel-cell" id="cell2">
+                <div class="cellcontent">
+                    <!--                    <img src="https://raw.githubusercontent.com/Teranya/VisInfo2/master/images/ice1.jpg">-->
+                    <a class="celllink" href="#">147 million to 216 million people worldwide can expect to see their homes submerged or put at risk for regular flooding by 2100.</a>
+                </div>
+            </div>
+            <div class="carousel-cell" id="cell3">
+                <div class="cellcontent">
+                    <!--                    <img src="https://raw.githubusercontent.com/Teranya/VisInfo2/master/images/plastic1.jpg">-->
+                    <a class="celllink" href="#">Over one million seabirds are killed by ocean pollution each year. Three hundred thousand dolphins and porpoises die each year as a result of becoming entangled in discarded fishing nets, among other items. One hundred thousand sea mammals are killed in the ocean by pollution each year</a>
+                </div>
+            </div>
+            <div class="carousel-cell" id="cell4">
+                <div class="cellcontent">
+                    <!--                    <img src="https://raw.githubusercontent.com/Teranya/VisInfo2/master/images/coral1.jpg">-->
+                    <a class="celllink" href="#">Recent studies suggest the planet has lost approximately half of its coral reefs in the last 30 years, and could lose more than 90% by the year 2050 if drastic changes are not made.</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="header">
+        <div id="hero">
+            <div id="herocontent">
+                <img src="https://raw.githubusercontent.com/Teranya/VisInfo2/master/images/OSOGraphic.png">
+
+                <div id="herotxt">
+                    <h2>Ocean Safety Alliance</h2>
+                    <p class="herotxt">The seas provide half of our oxygen, food for a billion people, and a home for some of the most spectacular wildlife on Earth. But the impacts of climate change, pollution and destructive industries mean they’re in more danger than ever. We urgently need to turn things around.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="campaign">
+        <h1>Make a difference </h1>
+        <h2>ON A SHORELINE NEAR YOU</h2>
+    </div>
+    <script>
+        $('.main-carousel').flickity({
+            // options
+            cellAlign: 'left',
+            contain: true,
+            prevNextButtons: false,
+            autoPlay: 5500,
+            pauseAutoPlayOnHover: true,
+            accessibility: true
+        });
+
+    </script>
+</body>
+
+</html>
