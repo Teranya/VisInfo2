@@ -5,4 +5,4 @@ OSO organizes and supports local campaigns that deal with ocean activism, shorel
 
 The target audience are Gen and millenials in an attempt to try and teach younger generations about crucial ocean and environment. 
 
-![OSO Logo](https://raw.githubusercontent.com/Teranya/VisInfo2/master/images/OSOLOGO.png)
+![OSO Logo](https://raw.githubusercontent.com/Teranya/VisInfo2/master/images/OSOLOGO%20tiny.png)
