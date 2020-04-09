@@ -4,3 +4,5 @@ The organization deals with issues relating to oceans and marine life on a globa
 OSO organizes and supports local campaigns that deal with ocean activism, shoreline cleanups, public education campaigns.
 
 The target audience are Gen and millenials in an attempt to try and teach younger generations about crucial ocean and environment. 
+
+![OSO Logo](https://raw.githubusercontent.com/Teranya/VisInfo2/master/images/OSOLOGO.png)
