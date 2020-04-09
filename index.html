@@ -1,194 +1,308 @@
-<!DOCTYPE html>
-<html>
-<title>OSO</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!DOCTYPE HTML>
+<html lang="">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ocean Safety Alliance</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+    <!--    jQuery-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!--    flickity-->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+</head>
+
 <style>
-    body,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        font-family: "Lato", sans-serif;
+    @charset "utf-8";
+
+    * {
+        margin: 0px;
+        padding: 0px;
     }
 
-    body,
-    html {
-        height: 100%;
-        background-color: #0F2C35;
-        color: white;
-        line-height: 1.8;
+    body {
+        font-family: 'Roboto', sans-serif;
+
     }
 
-    /* Create a Parallax Effect */
-    .bgimg-1,
-    .bgimg-2,
-    .bgimg-3 {
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
+    nav {
+        padding-top: .5%;
+        padding-bottom: .5%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        width: 100vw;
+        background-color: #151560;
+
+    }
+
+    nav ul {
+
+        list-style-type: none;
+        margin: 0;
+
+        /*        overflow: hidden;*/
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+
+    }
+
+    nav li {
+        padding-left: 1%;
+        white-space: nowrap;
+        display: inline;
+    }
+
+    nav img {
+        max-height: 40px;
+    }
+
+    nav li a {
+        display: inline-block;
+        color: #EDDBCC;
+        text-align: center;
+        margin: 1vw;
+        text-decoration: none;
+    }
+
+    nav li a:hover:not(.active) {
+        color: #02A3DA;
+    }
+
+    nav .active {
+        text-decoration: underline;
+    }
+
+    #header {
+        height: 70vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+    }
+
+    #hero {
+
+        width: 100vw;
+        height: 40vh;
+        margin: auto;
+
+        /*    font-family: 'Roboto', sans-serif;*/
+    }
+
+    #herocontent {
+        width: 60%;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #herocontent img {
+
+        max-width: 20vw;
+        height: auto;
+    }
+
+    #herotxt {
+        color: #2D72B6;
+        padding-left: 3%;
+    }
+
+    #herocontent p {
+
+
+        /*        max-width: 70%;*/
+
+    }
+
+    /*    Flickty*/
+
+    #flickity {
+        height: 85vh;
+        background-color: #333;
+        /*        background: #0F2C35;*/
+        /*        padding: 10% 0 0 0;*/
+    }
+
+    .carousel {
+        background-color: #333;
+        padding: 15%;
+    }
+
+    .carousel-cell {
+        width: 100vw;
+        height: 85vh;
+        counter-increment: carousel-cell;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+    .cellcontent {
+        grid-column: 2;
+        margin: auto;
+        width: 40vw;
+        max-width: 500px;
+        background-color: white;
+        padding: 5%;
+
+
+    }
+
+    .carousel-cell img {
+        width: 200px;
+    }
+
+    .celllink {
+        text-decoration: none;
+        color: black;
+        line-height: 1.63em;
+
+    }
+
+    #cell1 {
+        background-image: url("https://raw.githubusercontent.com/Teranya/VisInfo2/master/images/industry1.jpg");
         background-size: cover;
     }
 
-    /* First image (Logo. Full height) */
-    .bgimg-1 {
-        background-image: url("https://i.imgur.com/CZ5xqbd.jpg");
-        min-height: 100%;
+    #cell2 {
+        background-image: url("https://raw.githubusercontent.com/Teranya/VisInfo2/master/images/ice1.jpg");
+        background-size: cover;
     }
 
-    /* Second image (Portfolio) */
-    .bgimg-2 {
-        background-image: url("https://i.imgur.com/IansEOc.jpg");
-        min-height: 400px;
+    #cell3 {
+        background-image: url("https://raw.githubusercontent.com/Teranya/VisInfo2/master/images/plastic2.jpg");
+        background-size: cover;
     }
 
-    /* Third image (Contact) */
-    .bgimg-3 {
-        background-image: url("https://i.imgur.com/IansEOc.jpg");
-        min-height: 400px;
+    #cell4 {
+        background-image: url("https://raw.githubusercontent.com/Teranya/VisInfo2/master/images/coral1.jpg");
+        background-size: cover;
     }
 
-    .w3-wide {
-        letter-spacing: 10px;
-    }
 
-    .w3-hover-opacity {
-        cursor: pointer;
-    }
 
-    /* Turn off parallax scrolling for tablets and phones */
-    @media only screen and (max-device-width: 1600px) {
-
-        .bgimg-1,
-        .bgimg-2,
-        .bgimg-3 {
-            background-attachment: scroll;
-            min-height: 400px;
-        }
-    }
-
-    #banner {
-        height: 500px;
-        width: 100vw;
-        background-color: #0F2C35;
-    }
-
-    #bannertext {
+    cell number .carousel-cell:before {
+        display: block;
+        text-align: center;
+        content: counter(carousel-cell);
+        line-height: 200px;
+        font-size: 80px;
         color: white;
-        margin-top: 10%;
     }
 
-    #banner2 {
-        height: 500px;
-        min-width: 100vw;
-        background-color: #333;
+    .flickity-page-dots {
+        bottom: 20px;
 
+    }
+
+    /* white circles */
+    .flickity-page-dots .dot {
+        width: 12px;
+        height: 12px;
+        opacity: 1;
+        background: transparent;
+        border: 1px solid white;
+    }
+
+    /* fill-in selected dot */
+    .flickity-page-dots .dot.is-selected {
+        background: white;
+    }
+
+
+
+
+    /*camapign*/
+    #campaign {
+        background-color: #2C2C2C;
+        color: white;
+        height: 90vh;
+        /*        margin-top: 4%;*/
     }
 
 </style>
 
 <body>
+    <nav>
+        <img src="https://raw.githubusercontent.com/Teranya/VisInfo2/master/images/LOGOALTWHITE.png">
+        <ul>
 
-    <!-- Navbar (sit on top) -->
-    <div class="w3-top">
-        <div class="w3-bar" id="myNavbar">
-            <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-                <i class="fa fa-bars"></i>
-            </a>
-            <a href="#" class="w3-bar-item w3-button">HOME</a>
-            <a href="#" class="w3-bar-item w3-button w3-hide-small"></i>TOPIC 1</a>
-            <a href="#" class="w3-bar-item w3-button w3-hide-small"></i> TOPIC 2</a>
-            <a href="#" class="w3-bar-item w3-button w3-hide-small"></i> TOPIC 3</a>
-            <a href="#" class="w3-bar-item w3-button w3-hide-small"></i> TOPIC 4</a>
+            <li><a class="active" href="#">Home</a></li>
+            <li><a href="#">Acidification</a></li>
+            <li><a href="#">Pollution</a></li>
+            <li><a href="#">Water Levels</a></li>
+            <li><a href="#">Habitats</a></li>
+        </ul>
+    </nav>
 
-        </div>
-
-        <!-- Navbar on small screens -->
-        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-            <a href="#" class="w3-bar-item w3-button" onclick="toggleFunction()">TOPIC 1</a>
-            <a href="#" class="w3-bar-item w3-button" onclick="toggleFunction()">TOPIC 2</a>
-            <a href="#" class="w3-bar-item w3-button" onclick="toggleFunction()">TOPIC 3</a>
-            <a href="#" class="w3-bar-item w3-button" onclick="toggleFunction()">TOPIC 4</a>
-
-        </div>
-    </div>
-
-    <!-- First Parallax Image with Logo Text -->
-    <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
-        <div class="w3-display-middle" style="white-space:nowrap;">
-            <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"> OSO </span>
-            <img src="https://ysu-ca.youseeu.com/sync-activity/invite/135618/03f721ff16a7d43afd8f1d4c8d855c2a?lti-scope=d2l-resource-syncmeeting-list" style="width:400px;">
-        </div>
-    </div>
-
-    <!-- (First Section) -->
-
-
-    <div class="w3-content w3-container w3-padding-64" id="banner">
-
-        <div class="w3-half">
-            <img src="https://i.imgur.com/a7Br9SC.png" style="width:400px;">
-        </div>
-        <div class="w3-half" id="bannertext">
-            <p>Here's a little info snippet</p>
+    <div id="flickity">
+        <div class="main-carousel">
+            <div class="carousel-cell" id="cell1">
+                <div class="cellcontent">
+                    <!--                    <img src="https://raw.githubusercontent.com/Teranya/VisInfo2/master/images/industry1.jpg">-->
+                    <a class="celllink" href="#">Ocean acidity has increased by 30% since the beginning of the Industrial Revolution. This increase is 100 times faster than any change in acidity experienced by marine organisms for at least the last 20 million years.</a>
+                </div>
+            </div>
+            <div class="carousel-cell" id="cell2">
+                <div class="cellcontent">
+                    <!--                    <img src="https://raw.githubusercontent.com/Teranya/VisInfo2/master/images/ice1.jpg">-->
+                    <a class="celllink" href="#">147 million to 216 million people worldwide can expect to see their homes submerged or put at risk for regular flooding by 2100.</a>
+                </div>
+            </div>
+            <div class="carousel-cell" id="cell3">
+                <div class="cellcontent">
+                    <!--                    <img src="https://raw.githubusercontent.com/Teranya/VisInfo2/master/images/plastic1.jpg">-->
+                    <a class="celllink" href="#">Over one million seabirds are killed by ocean pollution each year. Three hundred thousand dolphins and porpoises die each year as a result of becoming entangled in discarded fishing nets, among other items. One hundred thousand sea mammals are killed in the ocean by pollution each year</a>
+                </div>
+            </div>
+            <div class="carousel-cell" id="cell4">
+                <div class="cellcontent">
+                    <!--                    <img src="https://raw.githubusercontent.com/Teranya/VisInfo2/master/images/coral1.jpg">-->
+                    <a class="celllink" href="#">Recent studies suggest the planet has lost approximately half of its coral reefs in the last 30 years, and could lose more than 90% by the year 2050 if drastic changes are not made.</a>
+                </div>
+            </div>
         </div>
     </div>
 
+    <div id="header">
+        <div id="hero">
+            <div id="herocontent">
+                <img src="https://raw.githubusercontent.com/Teranya/VisInfo2/master/images/OSOGraphic.png">
 
-    <!-- Second Parallax Image  -->
-    <div class="bgimg-2 w3-display-container w3-opacity-min">
-
+                <div id="herotxt">
+                    <h2>Ocean Safety Alliance</h2>
+                    <p class="herotxt">The seas provide half of our oxygen, food for a billion people, and a home for some of the most spectacular wildlife on Earth. But the impacts of climate change, pollution and destructive industries mean they’re in more danger than ever. We urgently need to turn things around.</p>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <!-- (Second Section) -->
 
-
-    <div class="w3-content w3-container " id="banner2">
+    <div id="campaign">
+        <h1>Make a difference </h1>
+        <h2>ON A SHORELINE NEAR YOU</h2>
     </div>
-
-
-
-
     <script>
-        // Modal Image Gallery
-        function onClick(element) {
-            document.getElementById("img01").src = element.src;
-            document.getElementById("modal01").style.display = "block";
-            var captionText = document.getElementById("caption");
-            captionText.innerHTML = element.alt;
-        }
-
-        // Change style of navbar on scroll
-        window.onscroll = function() {
-            myFunction()
-        };
-
-        function myFunction() {
-            var navbar = document.getElementById("myNavbar");
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
-            } else {
-                navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
-            }
-        }
-
-        // Used to toggle the menu on small screens when clicking on the menu button
-        function toggleFunction() {
-            var x = document.getElementById("navDemo");
-            if (x.className.indexOf("w3-show") == -1) {
-                x.className += " w3-show";
-            } else {
-                x.className = x.className.replace(" w3-show", "");
-            }
-        }
+        $('.main-carousel').flickity({
+            // options
+            cellAlign: 'left',
+            contain: true,
+            prevNextButtons: false,
+            autoPlay: 5500,
+            pauseAutoPlayOnHover: true,
+            accessibility: true
+        });
 
     </script>
-
 </body>
 
 </html>
