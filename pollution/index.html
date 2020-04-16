@@ -141,17 +141,20 @@
     }
 
     #herotxt p {
-        max-width: 700px;
+        max-width: 70vw;
     }
-
     /*CONTENT*/
     #content {
-        height: 90vh;
+       
         width: 100vw;
         display: flex;
-        flex-direction: row;
-        padding-top: 5%;
+        flex-direction: column;
+        padding: 5% 0;
+        
        
+    }
+     #content p{
+         max-width: 70vw;
     }
 
 
@@ -194,11 +197,14 @@
                     <!-- <h3>FACT SHEET ON</h3>-->
                     <h1>Ocean Pollution</h1>
                     <p class="herotxt">Over one million seabirds are killed by ocean pollution each year. Three hundred thousand dolphins and porpoises die each year as a result of becoming entangled in discarded fishing nets, among other items. One hundred thousand sea mammals are killed in the ocean by pollution each year</p>
+
                 </div>
             </div>
         </div>
     </div>
-    <div class="w3-content w3-container w3-padding-64" id="content">
+    <div class="w3-content w3-container" id="content">
+
+
         <div class='tableauPlaceholder' id='viz1587004968839' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Oi&#47;OilSpillsGraph&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
                 <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
                 <param name='embed_code_version' value='3' />
@@ -212,24 +218,25 @@
                 <param name='display_spinner' value='yes' />
                 <param name='display_overlay' value='yes' />
                 <param name='display_count' value='yes' /></object></div>
-        <script type='text/javascript'>
-            var divElement = document.getElementById('viz1587004968839');
-            var vizElement = divElement.getElementsByTagName('object')[0];
-            if (divElement.offsetWidth > 800) {
-                vizElement.style.width = '1024px';
-                vizElement.style.height = '795px';
-            } else if (divElement.offsetWidth > 500) {
-                vizElement.style.width = '1024px';
-                vizElement.style.height = '795px';
-            } else {
-                vizElement.style.width = '100%';
-                vizElement.style.height = '727px';
-            }
-            var scriptElement = document.createElement('script');
-            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-            vizElement.parentNode.insertBefore(scriptElement, vizElement);
+    </div>
+    <script type='text/javascript'>
+        var divElement = document.getElementById('viz1587004968839');
+        var vizElement = divElement.getElementsByTagName('object')[0];
+        if (divElement.offsetWidth > 800) {
+            vizElement.style.width = '1024px';
+            vizElement.style.height = '795px';
+        } else if (divElement.offsetWidth > 500) {
+            vizElement.style.width = '1024px';
+            vizElement.style.height = '795px';
+        } else {
+            vizElement.style.width = '100%';
+            vizElement.style.height = '727px';
+        }
+        var scriptElement = document.createElement('script');
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);
 
-        </script>
+    </script>
     </div>
 
 
