@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Ocean Safety Alliance</title>
+    <title>Ocean Safety Alliance - Ocean Acidity</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
     <!--    jQuery-->
@@ -26,7 +26,7 @@
     body {
         font-family: 'Montserrat', sans-serif;
 /*        background-color: #FDFDFD;*/
-         background-color: rgba(64, 139, 193, 0.23);
+/*         background-color: rgba(64, 139, 193, 0.23);*/
 /*        background-color: rgba(64, 139, 193);*/
 
     }
@@ -94,18 +94,24 @@
     /*ABOUT*/
 
     #header {
-        height: 50vh;
+/*        height: 50vh;*/
         width: 100vw;
         display: flex;
         flex-direction: row;
         padding-top: 5%;
+/*
+        background-image: url("https://raw.githubusercontent.com/Teranya/VisInfo2/master/images/pollution2.png");
+        background-size: cover;
+*/
         background-color: #408BC1;
+/*        background-attachment: fixed;*/
+/*  background-position: center;*/
     }
 
     #hero {
 
         width: 100vw;
-        height: 40vh;
+/*        height: 40vh;*/
         margin: auto;
 
         /*    font-family: 'Roboto', sans-serif;*/
@@ -132,6 +138,7 @@
         padding-left: 3%;
         font-size: 1.1rem;
         line-height: 1.6em;
+        margin-bottom: 5%;
     }
 
     #herotxt h1 {
@@ -148,7 +155,7 @@
 
     /*CONTENT*/
     #content {
-        height: 90vh;
+/*        height: 90vh;*/
         width: 100vw;
         display: flex;
         flex-direction: column;
@@ -200,14 +207,15 @@
                 <div id="herotxt">
                     <!--                    <h3>FACT SHEET ON</h3>-->
                     <h1>Ocean Acidity</h1>
-                    <p class="herotxt">Ocean acidity has increased by 30% since the beginning of the Industrial Revolution. This increase is 100 times faster than any change in acidity experienced by marine organisms for at least the last 20 million years.</p>
+                    <p class="herotxt">
+                        The ocean absorbs about 30% of the CO2 that is released in the atmosphere, and as levels of atmospheric CO2 increase, so do the levels in the ocean. When CO2 is absorbed by seawater, a series of chemical reactions occur resulting in the increased concentration of hydrogen ions. This increase causes the seawater to become more acidic and causes carbonate ions to be relatively less abundant. <br><br><b>Ocean acidity has increased by 30% since the beginning of the Industrial Revolution. This increase is 100 times faster than any change in acidity experienced by marine organisms for at least the last 20 million years.</b>
+                    </p>
                 </div>
             </div>
         </div>
     </div>
     <div class="w3-content w3-container w3-padding-64" id="content">
-        <p>Below you can see the upward trend in both the CO2 content of our air as well as the CO2 content of the oceans. The two measurements have an inverse relationship to one another which speaks to the oceans critical duty as a carbon sink. </p><br>
-        <p>When the CO2 in our atmosphere reaches a high concentration, the ocean begins to absorb and recycle the CO2 back into the ecosystem. However, as the CO2 in the atmosphere increases due to human pollution, the CO2 in the ocean rises as a result. This creates higher acidity in the ocean water, as well as higher temperatures which is indicated by the color of the ocean CO2 data points. Another factor of the ocean’s health that is destabilized by carbon emissions is the oxygen saturation of the ocean which has been steadily declining in recent years.</p><br>
+
         <div class='tableauPlaceholder' id='viz1587067376853' style='position: relative'>
             <noscript>
                 <a href='#'>
@@ -248,6 +256,10 @@
             vizElement.parentNode.insertBefore(scriptElement, vizElement);
 
         </script>
+        <div class="w3-row" style="margin-top: 5%;">
+            <p class="w3-justify  w3-padding">Above you can see the upward trend in both the CO2 content of our air as well as the CO2 content of the oceans. The two measurements have an inverse relationship to one another which speaks to the oceans critical duty as a carbon sink. </p>
+            <p class="w3-justify w3-padding">When the CO2 in our atmosphere reaches a high concentration, the ocean begins to absorb and recycle the CO2 back into the ecosystem. However, as the CO2 in the atmosphere increases due to human pollution, the CO2 in the ocean rises as a result. This creates higher acidity in the ocean water, as well as higher temperatures which is indicated by the color of the ocean CO2 data points. Another factor of the ocean’s health that is destabilized by carbon emissions is the oxygen saturation of the ocean which has been steadily declining in recent years.</p><br>
+        </div>
     </div>
 
 
