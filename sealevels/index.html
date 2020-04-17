@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Ocean Safety Alliance</title>
+    <title>Ocean Safety Alliance - Sea Levels</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
     <!--    jQuery-->
@@ -104,7 +104,7 @@
     #hero {
 
         width: 100vw;
-        height: 40vh;
+        height: 20vh;
         margin: auto;
 
         /*    font-family: 'Roboto', sans-serif;*/
@@ -149,9 +149,11 @@
     #content {
 /*        height: 90vh;*/
         width: 100vw;
-        display: flex;
-        flex-direction: row;
-        padding: 5% 0;
+display: flex;
+flex-direction: column;
+        align-content: center;
+        justify-content: center;
+/*        padding: 5% 0;*/
       
     }
     #viz1587005413942{
@@ -198,13 +200,21 @@
                 <div id="herotxt">
                     <!--                    <h3>FACT SHEET ON</h3>-->
                     <h1>Sea Levels</h1>
-                    <p class="herotxt">147 million to 216 million people worldwide can expect to see their homes submerged or put at risk for regular flooding by 2100.</p>
+                    <p class="herotxt">Sea level rise is caused primarily by two factors related to global warming: the added water from melting ice sheets and glaciers and the expansion of seawater as it warms.<br>147 million to 216 million people worldwide can expect to see their homes submerged or put at risk for regular flooding by 2100.</p>
                 </div>
             </div>
         </div>
     </div>
     <div class="w3-content w3-container" id="content">
-        <div class='tableauPlaceholder' id='viz1587005413942' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Vi&#47;VisualizingInformationProject3RisingSea-Levels&#47;Dashboard4&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
+        <div class="w3-row" style="margin: 5% 0;">
+            <p class="w3-justify" style="margin-bottom: 1%;">OSO’s mission is to protect and preserve our beautiful oceans, and due to rising sea-levels there have been a lot of issues conflicting out fight.
+                <br><br> In the graph below, you can see and explore the impact rising sea-levels have on wetlands and agriculture on a global scale, more specifically in developing regions. Wetlands are a crucial part of the environment because they protect our shores from waves, reduce flood impacts, as well as providing shelter to a lot of animals and plants. The majority of the world depends on agriculture for food, work, and other services, and this is even more important in the developing countries across the world. You can see what a devastating impact it has on agriculture and wetlands in these regions.
+            </p>
+            <p class="w3-justify">If you look closely you can see that regions like South Asia, South/Central Africa, Caribbean and South America are heavily impacted. This does not only effect their beaches but their economy, work opportunities, wild life habitats, and food and water as well.</p>
+
+        </div>
+
+        <div class='tableauPlaceholder' id='viz1587088838703' style='position: relative; margin-bottom: 5%;'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Vi&#47;VisualizingInformationProject3RisingSea-Levels&#47;Dashboard4&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
                 <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
                 <param name='embed_code_version' value='3' />
                 <param name='site_root' value='' />
@@ -216,11 +226,11 @@
                 <param name='display_static_image' value='yes' />
                 <param name='display_spinner' value='yes' />
                 <param name='display_overlay' value='yes' />
-                <param name='display_count' value='yes' /></object></div>
+                <param name='display_count' value='yes' />
+                <param name='filter' value='publish=yes' /></object></div>
         <script type='text/javascript'>
-            var divElement = document.getElementById('viz1587005413942');
+            var divElement = document.getElementById('viz1587088838703');
             var vizElement = divElement.getElementsByTagName('object')[0];
-
             if (divElement.offsetWidth > 800) {
                 vizElement.style.width = '1000px';
                 vizElement.style.height = '827px';
@@ -231,12 +241,12 @@
                 vizElement.style.width = '100%';
                 vizElement.style.height = '727px';
             }
-
             var scriptElement = document.createElement('script');
             scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
             vizElement.parentNode.insertBefore(scriptElement, vizElement);
 
         </script>
+
     </div>
 
 
